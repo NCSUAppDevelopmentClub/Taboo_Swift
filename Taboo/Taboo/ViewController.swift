@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var time = 60
     var paused = false
     @IBOutlet weak var clock: UILabel!
+    @IBOutlet weak var pauseMenu: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,10 +47,12 @@ class ViewController: UIViewController {
 
     @IBAction func onPauseClick(_ sender: AnyObject) {
         if(paused) {
+            pauseMenu.visible = true
             makeTimer()
             paused = false
         }
         else {
+            pauseMenu.visible = false
             timer.invalidate()
             paused = true
         }
