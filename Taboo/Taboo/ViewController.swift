@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func onPauseClick(_ sender: AnyObject) {
+    }
 
+    @IBAction func onBadClick(_ sender: AnyObject) {
+    }
+    
+    @IBAction func onGoodClick(_ sender: AnyObject) {
+    }
 }
 
