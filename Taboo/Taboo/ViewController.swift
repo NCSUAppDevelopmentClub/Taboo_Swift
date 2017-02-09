@@ -47,12 +47,12 @@ class ViewController: UIViewController {
 
     @IBAction func onPauseClick(_ sender: AnyObject) {
         if(paused) {
-            pauseMenu.visible = true
+            pauseMenu.isHidden = true
             makeTimer()
             paused = false
         }
         else {
-            pauseMenu.visible = false
+            pauseMenu.isHidden = false
             timer.invalidate()
             paused = true
         }
