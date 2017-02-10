@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var timer:Timer!
-    var time = 60
+    var time = 60.00
     var paused = false
     @IBOutlet weak var clock: UILabel!
     @IBOutlet weak var pauseMenu: UIView!
@@ -28,15 +28,15 @@ class ViewController: UIViewController {
     }
     
     func makeTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.decClock), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(ViewController.decClock), userInfo: nil, repeats: true)
     }
     
     func decClock() {
-        if(time == 0) {
+        if(time <= 0) {
             timer.invalidate()
         }
         else {
-            time -= 1
+            time -= 0.01
             clock.text = "\(time)"
         }
     }
