@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         clock.text = "\(time)"
         makeTimer()
+        pauseMenu.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,12 +56,20 @@ class ViewController: UIViewController {
 
     @IBAction func onPauseClick(_ sender: AnyObject) {
         if(paused) {
-            pauseMenu.isHidden = true
+            self.view.layoutIfNeeded()
+            UIView.animate(withDuration: 0.5, animations: {
+                self.pauseMenu.isHidden = true
+                self.view.layoutIfNeeded()
+            })
+            
             makeTimer()
             paused = false
         }
         else {
-            pauseMenu.isHidden = false
+            UIView.animate(withDuration: 0.5, animations: {
+                self.pauseMenu.isHidden = false
+                self.view.layoutIfNeeded()
+            })
             timer.invalidate()
             paused = true
         }
