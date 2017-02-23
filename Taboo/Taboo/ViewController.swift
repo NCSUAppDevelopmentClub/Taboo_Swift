@@ -37,7 +37,9 @@ class ViewController: UIViewController {
         }
         else {
             time -= 0.01
-            clock.text = "\(time)"
+            
+            let str = String(format: "%.2f", time)
+            clock.text = "\(str)"
         }
     }
     
