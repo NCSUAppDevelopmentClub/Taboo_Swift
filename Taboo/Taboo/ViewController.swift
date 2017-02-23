@@ -62,11 +62,11 @@ class ViewController: UIViewController {
                 self.pauseMenu.isHidden = true
                 self.view.layoutIfNeeded()
             })
-            
             makeTimer()
             paused = false
         }
         else {
+            self.view.layoutIfNeeded()
             UIView.animate(withDuration: 0.5, animations: {
                 self.pauseMenu.isHidden = false
                 self.view.layoutIfNeeded()
