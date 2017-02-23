@@ -33,12 +33,18 @@ class ViewController: UIViewController {
     
     func decClock() {
         if(time <= 0) {
+            time = 0;
             timer.invalidate()
-        }
-        else {
+        
+        } else if (time < 10) {
             time -= 0.01
             
             let str = String(format: "%.2f", time)
+            clock.text = "\(str)"
+        } else {
+            time -= 0.01
+            
+            let str = String(format: "%.0f", time)
             clock.text = "\(str)"
         }
     }
