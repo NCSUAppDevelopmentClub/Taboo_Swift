@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     func makeTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(ViewController.decClock), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(ViewController.decClock), userInfo: nil, repeats: true)
     }
     
     func decClock() {
@@ -38,12 +38,13 @@ class ViewController: UIViewController {
             timer.invalidate()
         
         } else if (time < 10) {
-            time -= 0.01
+            time -= 0.001
             
             let str = String(format: "%.2f", time)
             clock.text = "\(str)"
+            
         } else {
-            time -= 0.01
+            time -= 0.001
             
             let str = String(format: "%.0f", time)
             clock.text = "\(str)"
