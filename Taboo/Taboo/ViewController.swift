@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var timer:Timer!
-    var time = 15.00
+    var time = 60.00
     var paused = false
     let tabooWordCount = 5
     @IBOutlet weak var clock: UILabel!
@@ -27,6 +27,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         makeTimer()
         pauseMenu.isHidden = true
         tableView.separatorColor = UIColor.white
+        pauseMenu.isHidden = false
+        pauseMenu.alpha = 0.0
+        pauseMenu.center.y = self.view.center.y*3.0
     }
     
     override func didReceiveMemoryWarning() {
@@ -91,23 +94,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     @IBAction func onPauseClick(_ sender: AnyObject) {
-        if(paused) {
-            self.view.layoutIfNeeded()
-            UIView.animate(withDuration: 0.5, animations: {
-                self.pauseMenu.isHidden = true
-                self.view.layoutIfNeeded()
-            })
-            makeTimer()
-            paused = false
-        }
-        else {
-            self.view.layoutIfNeeded()
-            UIView.animate(withDuration: 0.5, animations: {
-                self.pauseMenu.isHidden = false
-                self.view.layoutIfNeeded()
-            })
+        //Switch pause to opposite state whenever pause button is clicked
+        paused = !paused
+        
+        //If game was paused stop the timer and animate the pause menu up while fading it in
+        if paused {
             timer.invalidate()
-            paused = true
+            UIView.animate(withDuration: 0.75, animations: {
+                self.pauseMenu.center.y = self.view.center.y
+                self.pauseMenu.alpha = 1.0
+            })
+        }
+        
+        //If the game was unpaused restart the timer and remove the pause menu immediately
+        else {
+            self.pauseMenu.alpha = 0.0
+            self.pauseMenu.center.y = self.view.center.y*3.0
+            makeTimer()
         }
     }
 
