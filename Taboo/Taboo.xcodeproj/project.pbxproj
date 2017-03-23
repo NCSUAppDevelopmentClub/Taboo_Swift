@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBCE00D21E83526000AD76B2 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE00D11E83526000AD76B2 /* ResultsViewController.swift */; };
 		D0A864561E42C856002E8E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A864551E42C856002E8E3D /* AppDelegate.swift */; };
 		D0A864581E42C856002E8E3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A864571E42C856002E8E3D /* ViewController.swift */; };
 		D0A8645B1E42C856002E8E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A864591E42C856002E8E3D /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BBCE00D11E83526000AD76B2 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		D0A864521E42C856002E8E3D /* Taboo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Taboo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A864551E42C856002E8E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A864571E42C856002E8E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				D0A864551E42C856002E8E3D /* AppDelegate.swift */,
 				D0A864571E42C856002E8E3D /* ViewController.swift */,
 				D0A864591E42C856002E8E3D /* Main.storyboard */,
+				BBCE00D11E83526000AD76B2 /* ResultsViewController.swift */,
 				D0A8645C1E42C856002E8E3D /* Assets.xcassets */,
 				D0A8645E1E42C856002E8E3D /* LaunchScreen.storyboard */,
 				D0A864611E42C856002E8E3D /* Info.plist */,
@@ -264,6 +267,7 @@
 			files = (
 				D0A864581E42C856002E8E3D /* ViewController.swift in Sources */,
 				D0A864561E42C856002E8E3D /* AppDelegate.swift in Sources */,
+				BBCE00D21E83526000AD76B2 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +518,7 @@
 				D0A8647C1E42C856002E8E3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0A8647D1E42C856002E8E3D /* Build configuration list for PBXNativeTarget "TabooTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +527,7 @@
 				D0A8647F1E42C856002E8E3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0A864801E42C856002E8E3D /* Build configuration list for PBXNativeTarget "TabooUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +536,7 @@
 				D0A864821E42C856002E8E3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
